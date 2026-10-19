@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyMate - Smart Study Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <h2>📚 StudyMate</h2>
+    <p class="tagline">Your study companion</p>
+    <nav>
+      <a href="#dashboard">🏠 Dashboard</a>
+      <a href="#timetable">📅 Timetable</a>
+      <a href="#assignments">📝 Assignments</a>
+      <a href="#exams">🎓 Exams</a>
+    </nav>
+  </aside>
+
+  <main>
+    <header>
+      <div>
+        <p class="welcome">WELCOME BACK 👋</p>
+        <h1>Let's make today productive!</h1>
+        <p>Plan your study time. Reach your goals.</p>
+      </div>
+      <div class="date" id="today"></div>
+    </header>
+
+    <section id="dashboard">
+      <h2>Your Dashboard</h2>
+      <div class="stats">
+        <div class="stat">
+          <span>📚</span>
+          <p>Total Assignments</p>
+          <h2 id="assignmentCount">0</h2>
+        </div>
+        <div class="stat">
+          <span>✅</span>
+          <p>Completed Tasks</p>
+          <h2 id="completedCount">0</h2>
+        </div>
+        <div class="stat">
+          <span>🎓</span>
+          <p>Upcoming Exams</p>
+          <h2 id="examCount">0</h2>
+        </div>
+      </div>
+    </section>
+
+    <section id="timetable" class="panel">
+      <h2>📅 My Timetable</h2>
+      <form id="scheduleForm">
+        <input id="scheduleSubject" placeholder="Subject name" required>
+        <input id="scheduleTime" type="time" required>
+        <button type="submit">Add Schedule</button>
+      </form>
+      <ul id="scheduleList"></ul>
+    </section>
+
+    <section id="assignments" class="panel">
+      <h2>📝 My Assignments</h2>
+      <form id="assignmentForm">
+        <input id="assignmentName" placeholder="Assignment title" required>
+        <input id="assignmentDue" type="date" required>
+        <button type="submit">Add Assignment</button>
+      </form>
+      <ul id="assignmentList"></ul>
+    </section>
+
+    <section id="exams" class="panel">
+      <h2>🎓 Upcoming Exams</h2>
+      <form id="examForm">
+        <input id="examSubject" placeholder="Exam subject" required>
+        <input id="examDate" type="date" required>
+        <button type="submit">Add Exam</button>
+      </form>
+      <ul id="examList"></ul>
+    </section>
+
+    <footer>Made with ❤️ for students | StudyMate</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
